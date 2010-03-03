@@ -1,0 +1,15 @@
+parameters:
+
+  sql_backup.class:       dmSqlBackup
+  sql_backup.adapters:
+    mysql:                dmSqlBackupAdapterMysql
+  sql_backup.options:
+    dir:                  SF_ROOT_DIR/data/dm/backup/sql
+    file_format:          %%db_name%%-%%year%%_%%month%%_%%day%%_%%time%%.sql
+
+services:
+
+  sql_backup:
+    class:                %sql_backup.class%
+    shared:               false
+    arguments:            [ @filesystem, %sql_backup.adapters%, %sql_backup.options% ]
