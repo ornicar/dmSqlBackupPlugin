@@ -8,4 +8,4 @@ Only works with [Diem 5.0](http://diem-project.org/) installed.
 
 Documentation
 -------------
-See online documentation at http://diem-project.org/plugins/dmsqlbackupplugin
+See the [online documentation](http://diem-project.org/plugins/dmsqlbackupplugin)
