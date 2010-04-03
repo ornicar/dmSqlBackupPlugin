@@ -8,8 +8,8 @@ class dmSqlBackupAdapterMysql extends dmSqlBackupAdapter
     return array(
       'user' => $this->connection->getOption('username'),
       'pass' => $this->connection->getOption('password'),
-      'host' => preg_replace('/mysql\:host=([-\w]+);.*/i', '$1', $this->connection->getOption('dsn')),
-      'name' => preg_replace('/mysql\:host=[-\w]+;dbname=([-\w]+);.*/i', '$1', $this->connection->getOption('dsn'))
+      'host' => preg_replace('/mysql\:host=([-\.\w]+);.*/i', '$1', $this->connection->getOption('dsn')),
+      'name' => preg_replace('/mysql\:host=[-\.\w]+;dbname=([-\.\w]+);.*/i', '$1', $this->connection->getOption('dsn'))
     );
   }
 
