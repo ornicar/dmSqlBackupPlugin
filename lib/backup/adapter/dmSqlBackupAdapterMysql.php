@@ -17,7 +17,7 @@ class dmSqlBackupAdapterMysql extends dmSqlBackupAdapter
   {
     $infos = $this->getInfos();
 
-    $command = sprintf('mysqldump --opt -h %s -u %s -p%s %s > %s',
+    $command = sprintf('mysqldump --opt -h "%s" -u "%s" -p"%s" "%s" > "%s"',
       $infos['host'],
       $infos['user'],
       $infos['pass'],
